@@ -29,14 +29,21 @@ const onBackPress = () =>{
             <Text>{userId}</Text>
             <Text>{id}</Text>
             <Text>{title}</Text>
-            <Image style={styles.Image}
-            source={{uri: 'https://via.placeholder.com/600/92c952'}}/>
+            
+            
 
 
             {photo && <FlatList data= {photo}
-             renderItem={({item})=><Image
+             renderItem={({item})=>
+             <View>
+             <Image
            style={styles.Image}
-            source={{uri: item.url}}></Image>} />}
+            source={{uri: item.url}}
+            >
+            </Image>
+            </View>
+        } 
+            />}
 
             <Button title = "Atras" onPress = {onBackPress}/>
         </View>
